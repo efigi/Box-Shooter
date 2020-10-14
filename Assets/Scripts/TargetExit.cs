@@ -27,9 +27,9 @@ public class TargetExit : MonoBehaviour
 			else if (!startDestroy) {
 				// set startDestroy to true so this code will not run a second time
 				startDestroy = true;
-
+				Debug.Log("ELLO");
 				// trigger the Animator to make the "Exit" transition
-				this.GetComponent<Animator> ().SetTrigger ("Exit");
+				this.GetComponent<Animator> ().SetTrigger("Exit");
 
 				// Call KillTarget function after exitAnimationSeconds to give time for animation to play
 				Invoke ("KillTarget", exitAnimationSeconds);
